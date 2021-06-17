@@ -1,10 +1,8 @@
 import React, { useState, Fragment } from 'react'
-// import { withRouter } from 'react-router-dom'
-// import { render } from 'react-dom'
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 
-function Climbs () {
+function SignInModal () {
   const [show, setShow] = useState(false)
 
   const handleClose = () => setShow(false)
@@ -13,20 +11,20 @@ function Climbs () {
   return (
     <Fragment>
       <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
+        Sign-In
       </Button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Sign-In</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, your reading this text in a modal!</Modal.Body>
+        <Modal.Body>Password<br /><input type="text"></input></Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
           <Button variant="primary" onClick={handleClose}>
-            Save Changes
+            Sign-In
           </Button>
         </Modal.Footer>
       </Modal>
@@ -34,6 +32,4 @@ function Climbs () {
   )
 }
 
-// render(<Climbs />)
-
-export default (Climbs)
+export default (SignInModal)
