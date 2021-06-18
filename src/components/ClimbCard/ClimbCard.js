@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import { Card, ListGroup, ListGroupItem } from 'react-bootstrap'
 import climbimage from './climb-joke.jpeg'
+import Example from './components/CheckBox/CheckBox'
 
 const ClimbCard = () => {
   return (
@@ -9,6 +10,7 @@ const ClimbCard = () => {
         <Card.Img variant="top" src={ climbimage } />
         <Card.Body>
           <Card.Title>Climb Name</Card.Title>
+          <Example />
           <Card.Text>
             Description of the climb
           </Card.Text>
