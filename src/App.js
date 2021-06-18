@@ -69,7 +69,7 @@ class App extends Component {
             <ChangePassword msgAlert={this.msgAlert} user={user} />
           )} />
         </main>
-        <div>
+        <div className="climb-card">
           <ClimbCard />
         </div>
       </Fragment>

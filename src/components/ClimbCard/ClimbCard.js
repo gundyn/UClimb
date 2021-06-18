@@ -1,26 +1,26 @@
 import React, { Fragment } from 'react'
 import { Card, ListGroup, ListGroupItem } from 'react-bootstrap'
+import climbimage from './climb-joke.jpeg'
 
 const ClimbCard = () => {
   return (
     <Fragment>
       <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+        <Card.Img variant="top" src={ climbimage } />
         <Card.Body>
-          <Card.Title>Card Title</Card.Title>
+          <Card.Title>Climb Name</Card.Title>
           <Card.Text>
-            Some quick example text to build on the card title and make up the bulk of
-            the cards content.
+            Description of the climb
           </Card.Text>
         </Card.Body>
         <ListGroup className="list-group-flush">
-          <ListGroupItem>Cras justo odio</ListGroupItem>
-          <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-          <ListGroupItem>Vestibulum at eros</ListGroupItem>
+          <ListGroupItem>Star Rating</ListGroupItem>
+          <ListGroupItem>Location</ListGroupItem>
+          <ListGroupItem>Conditions</ListGroupItem>
         </ListGroup>
         <Card.Body>
-          <Card.Link href="#">Card Link</Card.Link>
-          <Card.Link href="#">Another Link</Card.Link>
+          <Card.Link href="#">Check-In</Card.Link>
+          <Card.Link href="#">Directions</Card.Link>
         </Card.Body>
       </Card>
     </Fragment>
