@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { Route } from 'react-router-dom'
 import { v4 as uuid } from 'uuid'
+import { Container, Row, Col } from 'react-bootstrap'
 
 import AuthenticatedRoute from './components/AuthenticatedRoute/AuthenticatedRoute'
 import AutoDismissAlert from './components/AutoDismissAlert/AutoDismissAlert'
@@ -44,7 +45,6 @@ class App extends Component {
     return (
       <Fragment>
         <Header user={user} />
-        <SignInModal />
         {msgAlerts.map(msgAlert => (
           <AutoDismissAlert
             key={msgAlert.id}
@@ -69,9 +69,22 @@ class App extends Component {
             <ChangePassword msgAlert={this.msgAlert} user={user} />
           )} />
         </main>
-        <div className="climb-card">
-          <ClimbCard />
-        </div>
+        <Container fluid>
+          <Row>
+            <Col className="mb-5 mt-5">
+              <div className="climb-card">
+                <SignInModal />
+              </div>
+            </Col>
+          </Row>
+          <Row>
+            <Col className="mb-5">
+              <div className="climb-card">
+                <ClimbCard />
+              </div>
+            </Col>
+          </Row>
+        </Container>
       </Fragment>
     )
   }
